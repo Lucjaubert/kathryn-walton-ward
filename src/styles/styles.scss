@@ -1,92 +1,95 @@
 @import "./_variables.scss";
 @import "node_modules/bootstrap/scss/bootstrap";
 
-@each $family, $weight, $file in (
-  ('Atkinson Hyperlegible', 400, 'AtkinsonHyperlegible-Regular'),
-  ('Atkinson Hyperlegible', 700, 'AtkinsonHyperlegible-Bold'),
-  ('Garamond Premier Pro', 400, 'GaramondPremrPro-Bd'),
-  ('Garamond Premier Pro', 700, 'GaramondPremrPro-Bd')
-) {
-  @font-face {
-    font-family: $family;
-    src: url('/assets/fonts/#{$file}.ttf') format('truetype');
-    font-weight: $weight;
-    font-style: normal;
-  }
+@font-face {
+    font-family: 'Atkinson Hyperlegible Reg';
+    src: url('/assets/fonts/AtkinsonHyperlegible-Regular.ttf') format('truetype');
 }
 
-.container, .app-container {
-  width: 100% !important;
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
+@font-face {
+    font-family: 'Atkinson Hyperlegible Bd';
+    src: url('/assets/fonts/AtkinsonHyperlegible-Bold.ttf') format('truetype');
 }
+
+@font-face {
+    font-family: 'Garamond Premier Pro';
+    src: url('/assets/fonts/GaramondPremrPro.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Garamond Premier Pro Bd';
+    src: url('/assets/fonts/GaramondPremrPro-Bd.ttf') format('truetype');
+}
+
 
 .app-container {
-  position: relative;
-  transition: opacity 0.3s ease-in-out;
-  &.loading {
-    opacity: 0.5;
-  }
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+
+    @media (max-width: $breakpoint-xxl) {
+        padding: 0 14rem; 
+    }
+
+    @media (max-width: $breakpoint-xl) {
+        padding: 0 12rem; 
+    }
+
+    @media (max-width: $breakpoint-lg) {
+        padding: 0 8rem; 
+    }
+
+    @media (max-width: $breakpoint-md) {
+        padding: 0 4rem; 
+    }
+
+    @media (max-width: $breakpoint-sm) {
+        padding: 0 2rem; 
+    }
+
+    &.loading {
+        opacity: 0.5;
+    }
 }
 
 html, body {
-  font-family: 'Atkinson Hyperlegible', sans-serif;
-  color: map-get($theme-colors, "purple-dark");
-  background-color: map-get($theme-colors, "white");
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  height: 100%;
-  overflow-x: hidden;
+    font-family: 'Atkinson Hyperlegible', sans-serif;
+    color: map-get($theme-colors, "purple-dark");
+    background-color: map-get($theme-colors, "white");
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
 }
 
-@mixin text-style($color, $size, $weight) {
-  color: map-get($theme-colors, $color) !important;
-  font-size: map-get($font-size, $size);
-  font-weight: $weight;
-  font-style: normal;
+h1, h2, h3, p, ul, li, a {
+    font-weight: map-get($font-weight, "regular");
+    font-size: map-get($font-size, "30");
 }
 
-h1, h2 {
-  @include text-style("purple-dark", "70", 700);
-  src: url('/assets/fonts/NotoSansJP-Bold.ttf') format('truetype');
+h1 {
+    font-family: 'Garamond Premier Pro';
+    color: map-get($theme-colors, "red");
+    font-size: map-get($font-size, "150");
 }
 
 h2 {
-  font-size: map-get($font-size, "50");
+    font-family: 'Garamond Premier Pro';
+    color: map-get($theme-colors, "purple-dark");
+    font-size: map-get($font-size, "90");
 }
 
 h3 {
-  @include text-style("purple-dark", "40", 500);
-}
-
-p, a {
-  @include text-style("purple-dark", "20", 400);
-}
-
-a {
-  font-weight: 500 !important;
+    font-family: 'Garamond Premier Pro';
+    color: map-get($theme-colors, "purple-dark");
+    font-size: map-get($font-size, "50");
 }
 
 footer {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  transition: opacity 0.5s ease-in-out, visibility 0.5s;
-}
-
-@each $color-name, $color-value in $theme-colors {
-  .text-#{$color-name} {
-    color: $color-value;
-  }
-  .bg-#{$color-name} {
-    background-color: $color-value;
-  }
-}
-
-@each $name, $value in $font-size {
-  .text-fs-#{$name} {
-    font-size: $value;
-  }
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    transition: opacity 0.5s ease-in-out, visibility 0.5s;
 }
