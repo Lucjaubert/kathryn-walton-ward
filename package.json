@@ -7,7 +7,11 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "serve:ssr:kathrynwaltonward": "node dist/kathrynwaltonward/server/server.mjs"
+    "serve:ssr:kathrynwaltonward": "node dist/kathrynwaltonward/server/server.mjs",
+    "dev:ssr": "ng run kathrynwaltonward:serve-ssr",
+    "serve:ssr": "node dist/kathrynwaltonward/server/main.js",
+    "build:ssr": "ng build --prod && ng run kathrynwaltonward:server:production",
+    "prerender": "ng run kathrynwaltonward:prerender"
   },
   "private": true,
   "dependencies": {
@@ -21,6 +25,7 @@
     "@angular/platform-server": "^18.0.0",
     "@angular/router": "^18.0.0",
     "@angular/ssr": "^18.0.6",
+    "bootstrap": "^5.3.3",
     "express": "^4.18.2",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",

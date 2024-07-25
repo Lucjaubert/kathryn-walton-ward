@@ -1,0 +1,338 @@
+@import "../../../styles/_variables.scss";
+
+.container {
+  color: white;
+
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  
+  .image-fade-in {
+    animation: fadeIn 3.5s ease-out forwards;
+  }
+
+  .image-fade-in-2 {
+    animation: fadeIn 7.5s ease-out forwards;
+  }
+
+  .reflexologist-info {
+    font-weight: 200 !important;
+    color: map-get($theme-colors, "white") !important;
+  }
+
+  .reflexologist-info .line {
+    margin-bottom: 10px;
+  }
+
+  .reflexologist-info .line:last-child {
+      margin-bottom: 0;
+  }
+
+  .slogan {
+    color: map-get($theme-colors, "white") !important;
+  }
+
+  .img-background {
+    position: relative;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+
+    @media (max-width: 768px) {
+      height: 290px;
+    }
+
+    @media (max-width: 375px) {
+      height: 230px;
+    }
+  }
+
+  .intro-section {
+    position: absolute;
+    text-align: center;
+    top: 25%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+
+    @media (max-width: 1980px) {
+      top: 16%;
+    }
+
+    @media (max-width: 1440px) {
+      top: 12%;
+    }
+
+    @media (max-width: 1024px) {
+      top: 11%;
+    }
+
+    @media (max-width: 768px) {
+      top: 5.5% !important;
+    }
+
+    @media (max-width: 425px) {
+      top: 5.5% !important;
+    }
+
+    @media (max-width: 375px) {
+      top: 4% !important;
+    }
+
+    .slogan {
+    
+      @media (max-width: 1440px) {
+        top: 15%;
+      }
+  
+      @media (max-width: 1024px) {
+        padding: 55px !important;
+      }
+  
+      @media (max-width: 768px) {
+        bottom: 60% !important;
+        padding: 10px !important;
+      }
+    }
+  }
+
+  .btn-reserve {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    font-weight: 700 !important;
+    background-color: map-get($theme-colors, "green");
+    color: white;
+    border: 0.5px solid white;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    padding: 0;
+    font-size: 0.75rem;
+    text-align: center;
+
+    @media (min-width: 1909px) {
+      top: 35%;
+      width: 170px;
+      height: 170px;
+    }
+
+    @media (max-width: 1908px) {
+      top: 28%;
+      width: 170px;
+      height: 170px;
+    }
+
+    @media (max-width: 1440px) {
+      top: 27.5%;
+      width: 160px;
+      height: 160px;
+    }
+  
+    @media (max-width: 1024px) {
+      top: 21.5%;
+      width: 130px;
+      height: 130px;
+    }
+
+    @media (max-width: 768px) {
+      top: 9%; 
+      font-weight: 500 !important;
+      width: 90px;
+      height: 90px;
+      font-size: 0.5rem;
+    }
+  
+    @media (max-width: 426px) {
+      top: 9%; 
+      font-weight: 500 !important;
+      width: 90px;
+      height: 90px;
+      font-size: 0.5rem;
+    }
+
+    @media (max-width: 375px) {
+      top: 7.5%; 
+      font-weight: 400 !important;
+      width: 70px;
+      height: 70px;
+      font-size: 0.5rem;
+    }
+  }
+
+  .info-section {
+    justify-content: space-between;
+
+    @media (max-width: 1440px) {
+      padding: 30px 15%;
+    }
+
+    @media (max-width: 1024px) {
+      padding: 30px 15%;
+    }
+
+    @media (max-width: 768px) {
+      padding: 30px 15%;
+    }
+
+    @media (max-width: 425px) {
+      padding-top: 110px !important;
+      padding: 50px 10%;
+    }
+
+    @media (max-width: 375px) {
+      padding-top: 70px !important;
+      padding: 10px 10%;
+    }
+
+    .info-image {
+
+      @media (max-width: 1440px) {
+        width: 25%;
+      }
+
+      @media (max-width: 1024px) {
+        width: 30%;
+        padding-left: 30px;
+        
+      }
+
+      @media (max-width: 768px) {
+        width: 30%;
+        padding-top: 15px;
+        padding-left: 0px;
+      }
+
+      @media (max-width: 425px) {
+        display: none;
+      }
+
+      @media (max-width: 375px) {
+        display: none;
+      }
+    }
+  }
+
+  .triptych-container {
+    justify-content: center !important;
+
+    .triptych-content {
+        background-color: map-get($theme-colors, "grey-light");
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+        display: flex;
+        justify-content: center; 
+        width: 100%;
+        z-index: 1;
+
+        .background-triptych {
+            background-color: map-get($theme-colors, "white");
+            z-index: 2;
+
+            @media (max-width: 425px) {
+              padding-bottom: 20px;
+            }
+
+            @media (max-width: 375px) {
+              padding-bottom: 2px;
+            }
+            
+                .card {
+                    position: relative;
+                    margin-top: 20px;
+
+                    @media (max-width: 375px) {
+                      margin: 20px;
+                    }
+
+                .btn-see-more {
+                    background-color: map-get($theme-colors, "green");
+                    color: map-get($theme-colors, "white");
+                    font-size: map-get($font-size, "20") !important;
+                }
+            
+                img {
+                    width: 100%;
+                    height: 450px;
+                    object-fit: cover;
+                }
+            
+                .card-body {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: flex-end;
+                    align-items: center;
+                    background-color: rgba(83, 83, 83, 0.5);
+                    color: white;
+                    padding: 15px;
+                    box-sizing: border-box;
+                    cursor: pointer;
+                }
+
+                .card-text-container {
+                  width: 80%;
+                  background-color: #d3d3d370; 
+                  text-align: center;
+                  padding: 10px 0; 
+                  box-shadow: 0 2px 4px rgba(0,0,0,0.2); 
+                  border-top: solid 1px #bbb;
+
+                  @media (max-width: 768px) {
+                    height: 90px;
+                  }
+
+                  .card-title {
+                    margin: 0;
+                    font-size: 18px;
+                    font-weight: bold;
+                    color: white !important;
+                  }
+                }
+            }
+        }
+        
+    }
+  }
+
+  .informations-section {
+    width: 100%;
+
+    @media (max-width: 425px) {
+      justify-content: center;
+      align-items: baseline;
+      padding-left: 25px;
+    }
+
+    @media (max-width: 375px) {
+      align-items: baseline;
+    }
+  }
+  
+  
+  .card-title {
+    color: map-get($theme-colors, "green");
+  }
+  
+  @media (max-width: 768pxd) {
+    .intro-section .reflexologist-info,
+    .intro-section .slogan {
+      font-size: map-get($font-size, "40"); 
+    }
+  
+    @media (max-width: 425px) {
+      .intro-section .reflexologist-info,
+      .intro-section .slogan {
+        font-size: map-get($font-size, "30"); 
+      }
+    }
+  }
+}
