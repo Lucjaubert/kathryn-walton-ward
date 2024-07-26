@@ -21,6 +21,12 @@
   .book-promotion {
     position: relative;
 
+    h2 {
+      @media (max-width: $breakpoint-sm) {
+        font-size: map-get($font-size, "40");
+      }
+    }
+
     .row {
       align-items: center;
     }
