@@ -1,20 +1,21 @@
-
+<div class="promotion-content">
+  <div class="background-image"></div>
   <div class="container-fluid book-promotion">
     <div class="title-content d-flex">
       <div class="col-md-6">
       </div>
-      <div class="col-md-6 d-flex flex-column align-items-end">
+      <div class="col-md-6 col-12 px-10 px-md-0 d-flex flex-column align-items-sm-end text-center text-md-end">
         <h1 class="mt-8">ANGLAIS DU VIN</h1>
-        <h2>Kathryn Walton Ward</h2>
+        <h2 class="subtitle">Kathryn Walton Ward</h2>
       </div>
     </div>
-    <div class="d-flex book-content">
-      <div class="col-md-5 mt-xl-6">
+    <div class="d-flex flex-md-row flex-column book-content">
+      <div class="col-md-5 mt-xl-6 mt-6 d-flex flex-column align-items-center align-items-md-start">
         <div class="book-cover-container">
           <img src="/assets/img/book-cover.png" alt="Couverture du livre Anglais du Vin" class="img-fluid-book default-image">
           <img src="/assets/img/4e-de-couve.png" alt="4ème de couverture du livre Anglais du Vin" class="img-fluid-book hover-image">
         </div>        
-        <div class="book-details text-start">
+        <div class="book-details text-center text-md-start">
             <p>Parution : 13 juin 2024<br>Format : 208 x 297 mm - 76 pages<br>Prix : 38,00 €</p>
         </div>
       </div>
@@ -28,29 +29,33 @@
               <div class="line-sale-points flex-grow-1"></div>
           </div>
           <div class="sale-locations d-flex justify-content-around align-items-center mt-5">
-              <div class="sale-location col-md-4">
-                  <p>À la Librairie Mollat</p>
-                  <img src="/assets/img/logo-mollat.png" alt="Librairie Mollat" class="img-fluid-mollat">
-              </div>
-              <div class="vertical-divider"></div>
-              <div class="sale-location col-md-4">
-                  <p>À la Boutique de La Cité du Vin</p>
-                  <img src="/assets/img/logo-cite-vin.png" alt="La Cité du Vin" class="img-fluid-cite">
-              </div>
+            <div class="sale-location col-md-4">
+              <a href="https://maps.app.goo.gl/CAwkGba5EvCL3V7YA" target="_blank" title="Voir sur Google Maps">
+                <p class="mb-md-5 mb-xs-1 pb-xs-1 mb-4 pb-2">À la Librairie Mollat</p>
+                <img src="/assets/img/logo-mollat.png" alt="Librairie Mollat" class="img-fluid-mollat mt-xs-3">
+              </a>
+            </div>
+            <div class="vertical-divider"></div>
+            <div class="sale-location col-md-4">
+              <a href="https://maps.app.goo.gl/uCKo8uKLpG1ytefJ8" target="_blank" title="Voir sur Google Maps">
+                <p class="mb-md-4">À la Boutique de La Cité du Vin</p>
+                <img src="/assets/img/logo-cite-vin.png" alt="La Cité du Vin" class="img-fluid-cite">
+              </a>
+            </div>
           </div>
           <p class="online-store">& en ligne sur <a href="https://www.mollat.com">Mollat.com</a></p>
           <button type="button" class="btn btn-buy mt-4" (click)="redirectToMollat()">ACHETER</button>
+          <div class="scroll-indicator text-center mt-5" (click)="scrollToAdditionalInfo()">
+            <i class="fas fa-chevron-down"></i>
+          </div>
         </div>
       </div>
-    </div>
-    <div class="scroll-indicator text-center" (click)="scrollToAdditionalInfo()">
-      <i class="fas fa-chevron-down"></i>
     </div>
   </div>
 
   <div id="additional-info-section" class="container-fluid additional-info">
-    <div class="d-flex">
-      <div class="col-lg-7 px-md-4 ml-lg-17 mt-lg-10">
+    <div class="d-flex flex-md-row flex-column">
+      <div class="col-md-7 px-md-4 ml-lg-17 mt-10">
           <p>Kathryn Walton Ward a pensé ce livre en constatant un manque d'outils adaptés lors des cours d'anglais, qu'elle dispensait pour Winevox dans les propriétés viticoles de la région. Elle a observé que, malgré le grand besoin des professionnels du vin à maîtriser l'anglais technique, il n'existait pas de ressources spécifiques pour répondre à cette demande. Son objectif avec ce manuel est de combler cette lacune et de fournir à ces passionnés du vin un manuel pratique et efficace pour améliorer leur anglais.</p>
           <p class="mt-md-8">Voici ce que les lecteurs pourront découvrir :</p>
           <ul class="px-10">
@@ -61,7 +66,7 @@
             <li><strong>Astuces et conseils</strong> : des recommandations utiles pour améliorer l'apprentissage et la pratique de l'anglais dans un contexte du vin.</li>
           </ul>
       </div>
-      <div class="col-lg-3 mt-lg-10 pl-lg-10">
+      <div class="col-md-3 pl-lg-10 pl-0 pb-12 pb-md-0">
         <div class="note">
           <div class="note-content">
             <p class="text-fs-10"><strong>Please Note!</strong></p>
@@ -72,12 +77,14 @@
         </div>
       </div>
     </div>
-    <div class="d-flex">
+    <div class="d-flex flex-md-row flex-column author">
       <div class="col-lg-7 px-md-4 ml-lg-17 mt-lg-8">
         <p class="mt-md-5 pr-lg-13">Née aux États-Unis, Kathryn Walton Ward a vécu au Brésil avant d'arriver en Europe. D'abord comédienne, elle se tourne rapidement vers le scénario et la réalisation. Depuis son installation dans la région bordelaise en 2011, Kathryn coache les décideurs du monde du vin en anglais. C'est ainsi qu'elle découvre l'absence d'un outil dévolu à l'apprentissage du vocabulaire anglais vitiviniculteur. Elle décide de pallier ce manque en mettant à profit sa capacité scénaristique et son expérience de l'enseignement pour offrir un manuel qui fasse la part belle à la conversation. C'est ainsi qu'est né 'Anglais du Vin'!</p>
       </div>
-      <div class="col-lg-3 mt-lg-8 pl-lg-5">
-          <img src="/assets/img/portrait-kathryn.png" alt="Kathryn Walton Ward" class="img-fluid rounded-circle mt-3">
-      </div>
+      <div class="col-lg-3 mt-lg-8 pl-lg-5 d-flex justify-content-center justify-md-content-end">
+        <img src="/assets/img/portrait-kathryn.png" alt="Kathryn Walton Ward" class="img-fluid-author rounded-circle mt-3">
+      </div>    
     </div>
   </div>
+</div>
+    

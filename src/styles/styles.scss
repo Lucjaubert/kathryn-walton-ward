@@ -28,6 +28,10 @@
     flex-direction: column;
     min-height: 100vh;
 
+    @media (max-width: $breakpoint-3xl) {
+        padding: 0 20rem; 
+    }
+
     @media (max-width: $breakpoint-xxl) {
         padding: 0 14rem; 
     }
@@ -41,11 +45,7 @@
     }
 
     @media (max-width: $breakpoint-md) {
-        padding: 0 4rem; 
-    }
-
-    @media (max-width: $breakpoint-sm) {
-        padding: 0 2rem; 
+        padding: 0 1rem; 
     }
 
     &.loading {
@@ -87,6 +87,29 @@ h3 {
     font-size: map-get($font-size, "50");
 }
 
+
+// Ajustements de taille de police pour différentes tailles d'écran
+@media (max-width: 1024px) {
+    h1 { font-size: calc(map-get($font-size, "150") * 0.9); }
+    h2 { font-size: calc(map-get($font-size, "90") * 0.9); }
+    h3 { font-size: calc(map-get($font-size, "50") * 0.9); }
+    p, ul, li, a { font-size: calc(map-get($font-size, "30") * 0.9); }
+}
+
+@media (max-width: 768px) {
+    h1 { font-size: calc(map-get($font-size, "150") * 0.8); }
+    h2 { font-size: calc(map-get($font-size, "90") * 0.8); }
+    h3 { font-size: calc(map-get($font-size, "50") * 0.8); }
+    p, ul, li, a  { font-size: calc(map-get($font-size, "30") * 0.8); }
+}
+
+@media (max-width: 425px) {
+    h1 { font-size: calc(map-get($font-size, "150") * 0.7); }
+    h2 { font-size: calc(map-get($font-size, "90") * 0.7); }
+    h3 { font-size: calc(map-get($font-size, "50") * 0.7); }
+    p, ul, li, a  { font-size: calc(map-get($font-size, "30") * 0.7); }
+
+}
 
 // Example of creating padding classes dynamically
 @each $breakpoint, $breakpoint-value in $breakpoints {

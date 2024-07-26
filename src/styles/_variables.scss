@@ -66,6 +66,7 @@ $breakpoint-md: 768px;
 $breakpoint-lg: 1024px;
 $breakpoint-xl: 1440px;
 $breakpoint-xxl: 1980px;
+$breakpoint-3xl: 2560px;
 
 
 // Espacements
@@ -170,46 +171,6 @@ $spacers: (
   // 704px
   "49": 45rem,
   // 720px
-  "50": 46rem,
-  // 736px
-  "51": 47rem,
-  // 752px
-  "52": 48rem,
-  // 768px
-  "53": 49rem,
-  // 784px
-  "54": 50rem,
-  // 800px
-  "55": 51rem,
-  // 816px
-  "56": 52rem,
-  // 832px
-  "57": 53rem,
-  // 848px
-  "58": 54rem,
-  // 864px
-  "59": 55rem,
-  // 880px
-  "60": 56rem,
-  // 896px
-  "61": 57rem,
-  // 912px
-  "62": 58rem,
-  // 928px
-  "63": 59rem,
-  // 944px
-  "64": 60rem,
-  // 960px
-  "65": 61rem,
-  // 976px
-  "66": 62rem,
-  // 992px
-  "67": 63rem,
-  // 1008px
-  "68": 64rem,
-  // 1024px
-  "69": 65rem,
-  // 1040px
 );
 
 // Génération dynamique des classes de couleur, de taille de police et de poids de police

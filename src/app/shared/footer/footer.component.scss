@@ -4,9 +4,17 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px;
     background-color: #7860A4; 
     color: #ffffff;
+    padding: 3rem 14rem;
+
+    @media (max-width: $breakpoint-lg) {
+        padding: 3rem 6rem;
+    }
+
+    @media (max-width: $breakpoint-sm) {
+        padding: 3rem 4rem; 
+    }
   }
   
   .footer-section {
@@ -39,15 +47,10 @@
     width: 2px;
     background-color: map-get($theme-colors, "white");
     margin: 0 20px; 
+
+    @media (max-width: $breakpoint-md) {
+        display: none; 
+    }
 }
   
-  @media (max-width: 768px) {
-    .footer-container {
-      flex-direction: column;
-    }
-    .footer-section {
-      flex-direction: column;
-      align-items: center;
-    }
-  }
   
