@@ -4,44 +4,51 @@
       <div class="col-md-6">
       </div>
       <div class="col-md-6 d-flex flex-column align-items-end">
-        <h1 class="mt-9">ANGLAIS DU VIN</h1>
+        <h1 class="mt-8">ANGLAIS DU VIN</h1>
         <h2>Kathryn Walton Ward</h2>
       </div>
     </div>
-    <div class="d-flex content">
-      <div class="col-md-5 mt-xl-4">
-          <img src="/assets/img/book-cover.png" alt="Couverture du livre Anglais du Vin" class="img-fluid-book">
-          <div class="book-details mt-3 d-flex align-items-end pl-14 pt-3">
-              <p>Parution : 13 juin 2024<br>Format : 208 x 297 mm - 76 pages<br>Prix : 38,00 €</p>
-          </div>
+    <div class="d-flex book-content">
+      <div class="col-md-5 mt-xl-6">
+        <div class="book-cover-container">
+          <img src="/assets/img/book-cover.png" alt="Couverture du livre Anglais du Vin" class="img-fluid-book default-image">
+          <img src="/assets/img/4e-de-couve.png" alt="4ème de couverture du livre Anglais du Vin" class="img-fluid-book hover-image">
+        </div>        
+        <div class="book-details text-start">
+            <p>Parution : 13 juin 2024<br>Format : 208 x 297 mm - 76 pages<br>Prix : 38,00 €</p>
+        </div>
       </div>
       <div class="col-md-7">
-        <h3 class="mt-8">Une ressource précieuse pour les vignerons, sommeliers, négociants et autres acteurs de l’industrie viticole.</h3>
-        <p class="mt-8">Kathryn Walton Ward, enseignante d’anglais et passionnée de viticulture, publie son premier ouvrage « Anglais du Vin ». Ce manuel, rédigé en anglais américain, est conçu pour les professionnels, les passionnés et les amateurs du vin, afin de les aider à maîtriser le vocabulaire technique et à améliorer leurs compétences en anglais.</p>
-        <p class="mt-8">«Anglais du Vin» propose une approche complète et immersive pour l’apprentissage de l’anglais dans le contexte viticole. Il se structure autour de la visite d’une propriété fictive dans le Bordelais, spécialisée dans la production de vin rouge. </p>
-        <div class="sale-points">
+        <h3 class="mt-6">Une ressource précieuse pour les vignerons, sommeliers, négociants et autres acteurs de l’industrie viticole.</h3>
+        <p class="mt-6">Kathryn Walton Ward, enseignante d’anglais et passionnée de viticulture, publie son premier ouvrage « Anglais du Vin ». Ce manuel, rédigé en anglais américain, est conçu pour les professionnels, les passionnés et les amateurs du vin, afin de les aider à maîtriser le vocabulaire technique et à améliorer leurs compétences en anglais.</p>
+        <p class="mt-6">«Anglais du Vin» propose une approche complète et immersive pour l’apprentissage de l’anglais dans le contexte viticole. Il se structure autour de la visite d’une propriété fictive dans le Bordelais, spécialisée dans la production de vin rouge. </p>
+        <div class="sale-points mt-8">
           <div class="d-flex align-items-center">
               <h3>Points de vente à Bordeaux</h3>
-              <div class="line-sale-points"></div>
+              <div class="line-sale-points flex-grow-1"></div>
           </div>
-          <div class="sale-locations d-flex justify-content-around align-items-center">
-              <div class="sale-location">
-                  <p>A la Librairie Mollat</p>
+          <div class="sale-locations d-flex justify-content-around align-items-center mt-5">
+              <div class="sale-location col-md-4">
+                  <p>À la Librairie Mollat</p>
                   <img src="/assets/img/logo-mollat.png" alt="Librairie Mollat" class="img-fluid-mollat">
               </div>
               <div class="vertical-divider"></div>
-              <div class="sale-location">
-                  <p>A la Boutique de La Cité du Vin</p>
+              <div class="sale-location col-md-4">
+                  <p>À la Boutique de La Cité du Vin</p>
                   <img src="/assets/img/logo-cite-vin.png" alt="La Cité du Vin" class="img-fluid-cite">
               </div>
           </div>
-          <p class="online-store">et en ligne sur <a href="https://www.mollat.com">Mollat.com</a></p>
-          <button type="button" class="btn btn-primary">Acheter</button>
+          <p class="online-store">& en ligne sur <a href="https://www.mollat.com">Mollat.com</a></p>
+          <button type="button" class="btn btn-buy mt-4" (click)="redirectToMollat()">Acheter</button>
         </div>
       </div>
     </div>
+    <div class="scroll-indicator text-center" (click)="scrollToAdditionalInfo()">
+      <i class="fas fa-chevron-down"></i>
+    </div>
   </div>
-  <div class="container-fluid additional-info">
+
+  <div id="additional-info-section" class="container-fluid additional-info">
     <div class="row">
         <div class="col-lg-8">
             <p>Kathryn Walton Ward a pensé ce livre en constatant un manque d'outils adaptés lors des cours d'anglais, qu'elle dispensait pour Winevox dans les propriétés viticoles de la région. Elle a observé que, malgré le grand besoin des professionnels du vin à maîtriser l'anglais technique, il n'existait pas de ressources spécifiques pour répondre à cette demande. Son objectif avec ce manuel est de combler cette lacune et de fournir à ces passionnés du vin un manuel pratique et efficace pour améliorer leur anglais.</p>

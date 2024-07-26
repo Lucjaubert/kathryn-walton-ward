@@ -10,6 +10,14 @@ import { RouterModule } from '@angular/router';
 })
 export class HomepageComponent  {
 
-  constructor() {
+  constructor() {}
+
+  redirectToMollat() {
+    window.open('https://www.mollat.com/livres/3155090/kathryn-walton-ward-anglais-du-vin', '_blank');
+  }
+
+  scrollToAdditionalInfo(): void {
+    const detailsSection = document.getElementById('additional-info-section');
+    detailsSection?.scrollIntoView({ behavior: 'smooth' });
   }
 }
