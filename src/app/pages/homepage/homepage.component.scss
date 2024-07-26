@@ -135,10 +135,9 @@
         font-family: 'Atkinson Hyperlegible', sans-serif;
         border: 2px solid map-get($theme-colors, "purple-dark");
         border-radius: 20px;
-        width: 6vw;
+        width: auto;
         background-size: 200% 100%;
         background-position: left;
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
         transition: color 0.3s ease, box-shadow 0.3s ease;
       
         &:hover {
@@ -169,7 +168,7 @@
     font-size: 24px; 
     color: map-get($theme-colors, "red");
     animation: bounce 2s infinite; 
-}
+  }
 
 }
 
@@ -182,11 +181,36 @@
   }
 
   .note {
-    background-color: map-get($theme-colors, "green");
+    position: relative;
+    max-width: 350px; 
+    min-width: 350px;
+    margin: 20px auto;
     padding: 20px;
-    border-radius: 10px;
-    color: map-get($theme-colors, "white");
+
+  
+    .note-content {
+      position: relative;
+      z-index: 2; 
+      transform: rotate(6deg);
+      color: map-get($theme-colors, "purple-dark");
+      border-radius: 10px;
+      padding: 60px;
+      top: 50px;
+      left: 20px;
+    }
+  
+    img.img-fluid-note {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 130%;
+      height: 130%;
+      object-fit: cover;
+      border-radius: 10px;
+      z-index: 1;
+    }
   }
+  
 
   img {
     max-width: 100%;
