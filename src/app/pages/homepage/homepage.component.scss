@@ -133,19 +133,25 @@
         background-color: transparent;
         color: map-get($theme-colors, "purple-dark");
         font-family: 'Atkinson Hyperlegible', sans-serif;
-        border: 2px solid map-get($theme-colors, "purple-dark");
+        border: 1px solid map-get($theme-colors, "purple-dark");
         border-radius: 20px;
+        padding: 10px 20px; 
         width: auto;
+        display: inline-flex; 
+        align-items: center; 
+        justify-content: center; 
         background-size: 200% 100%;
         background-position: left;
-        transition: color 0.3s ease, box-shadow 0.3s ease;
-      
+        transition: color 0.3s ease, box-shadow 0.3s ease, background-position 0.3s ease;
+        text-align: center;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    
         &:hover {
-          background-color: map-get($theme-colors, "green");
-          color: map-get($theme-colors, "white");
-          border: 2px solid map-get($theme-colors, "green");
-          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-          background-image: linear-gradient(to right, rgba(255,255,255,0.1) 50%, map-get($theme-colors, "green") 50%);
+            background-color: map-get($theme-colors, "green");
+            color: map-get($theme-colors, "white");
+            border: 1px solid map-get($theme-colors, "green");
+            box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3);
+            background-image: linear-gradient(to right, rgba(255,255,255,0.1) 50%, map-get($theme-colors, "green") 50%);
         }
       }
     }

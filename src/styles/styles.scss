@@ -87,13 +87,6 @@ h3 {
     font-size: map-get($font-size, "50");
 }
 
-footer {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    transition: opacity 0.5s ease-in-out, visibility 0.5s;
-}
-
 
 // Example of creating padding classes dynamically
 @each $breakpoint, $breakpoint-value in $breakpoints {

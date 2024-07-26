@@ -1,156 +1,53 @@
 @import "../../../styles/variables.scss";
 
-.footer-item {
-    background-color: #719673; 
-    color: white;
-    margin-top: auto;
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #7860A4; 
+    color: #ffffff;
+  }
+  
+  .footer-section {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+  }
+  
+  .footer-contact, .footer-logo, .footer-contacts {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .footer-logo img {
+    margin-bottom: 10px;
+  }
+  
+  footer a {
+    color: #ffffff;
+    text-decoration: none;
+  }
+  
+  footer p, footer a {
+    margin: 5px 0;
+  }
 
-    .footer-content-container {
-        display: flex;
-        justify-content: center;
-        align-items: start;
-
-        .logo-container {
-
-            .logo-footer {
-                width: 300px;
-                height: auto;
-                max-height: 300px;
-                max-width: 300px;
-            }
-        }
-
-        .footer-sections {
-            display: flex;
-            justify-content: between;
-
-            .footer-section {
-              display: flex;
-              flex-direction: column;
-              align-items: center;
-          
-              &:last-child {
-                  margin-right: 0; 
-              }
-          
-              .footer-title {
-                  font-weight: bold;
-                  margin-bottom: 0.5rem;
-                  color: map-get($theme-colors, "white") !important;
-              }
-          
-              .footer-content {
-                  text-align: center;
-                  color: map-get($theme-colors, "white");
-              }
-          
-              .social-icons {
-                  display: flex;
-          
-                  .social-icon {
-                      width: 30px;
-                      height: 30px;
-                      margin-right: 1rem;
-          
-                      &:last-child {
-                          margin-right: 0;
-                      }
-                  }
-              }
-          }          
-        }
-    }
-
-    .footer-link {
-        color: white;
-        text-decoration: none;
-        margin-right: 9rem; 
-
-        &:last-child {
-            margin-right: 0;
-        }
-    }
-
-    .border-top {
-        border-color: white;
-        margin-top: 2rem;
-    }
-
-    .legal-section {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-        margin-top: 20px; 
-
-      
-    }
+  .vertical-divider {
+    height: 100px;
+    width: 2px;
+    background-color: map-get($theme-colors, "white");
+    margin: 0 20px; 
 }
-
-@media (max-width: 1024px) {
-    .footer-item {
-        background-color: #719673; 
-        color: white;
-        padding: 20px; 
-
-        .footer-content-container {
-            flex-direction: column;
-            align-items: center !important;
-            padding-left: 20px;
-            padding-right: 20px;
-
-            .logo-container {
-                margin-right: 0;
-                margin-bottom: 10px; 
-
-                .logo-footer {
-                    width: 180px; 
-                    height: auto;
-                }
-            }
-
-            .footer-sections {
-                flex-direction: column;
-                justify-content: center;
-                margin-top: 20px; 
-
-                .footer-section {
-                    margin-right: 0;
-                    margin-bottom: 30px; 
-
-                    .footer-title {
-                        text-align: center; 
-                    }
-
-                    .footer-content {
-                        text-align: center;
-                    }
-
-                    .social-icons {
-                        justify-content: center; 
-                        margin-top: 10px; 
-                    }
-                }          
-            }
-        }
-
-        .legal-section {
-            display: flex;
-            flex-direction: column !important;
-            align-items: center;
-            margin-top: 20px; 
-
-            .legal-box {
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-            }
-
-            .footer-link {
-                margin-right: 0;
-                margin-bottom: 25px; 
-                margin-top: 25px;   
-            }
-        }
+  
+  @media (max-width: 768px) {
+    .footer-container {
+      flex-direction: column;
     }
-}
+    .footer-section {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+  
