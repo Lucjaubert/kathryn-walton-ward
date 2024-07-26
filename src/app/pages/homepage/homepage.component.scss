@@ -107,6 +107,7 @@
               display: flex;
               flex-direction: column;
               align-items: center;
+              color: #007bff;
               
               .img-fluid-mollat {
                   width: 45%;
@@ -167,15 +168,17 @@
   }
 
   .scroll-indicator {
-    position: absolute;
     bottom: 10px;
     left: 50%;
     transform: translateX(-50%);
     font-size: 24px; 
     color: map-get($theme-colors, "red");
     animation: bounce 2s infinite; 
-  }
 
+    @media (max-width: $breakpoint-lg) {
+        display: none; 
+    }
+  }
 }
 
 .additional-info {
