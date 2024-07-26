@@ -212,6 +212,28 @@ $spacers: (
   // 1040px
 );
 
+// Génération dynamique des classes de couleur, de taille de police et de poids de police
+@each $name, $value in $theme-colors {
+  .bg-#{$name} {
+    background-color: $value;
+  }
+  .text-#{$name} {
+    color: $value;
+  }
+}
+
+@each $name, $value in $font-size {
+  .text-fs-#{$name} {
+    font-size: $value;
+  }
+}
+
+@each $name, $value in $font-weight {
+  .text-fw-#{$name} {
+    font-weight: $value;
+  }
+}
+
 // classes for padding and margins
 @each $name, $size in $spacers {
   .pl-#{$name} { padding-left: $size; }
@@ -227,6 +249,29 @@ $spacers: (
   .mx-#{$name} { margin-left: $size; margin-right: $size; }
   .my-#{$name} { margin-top: $size; margin-bottom: $size; }
 }
+
+// Réactivité basée sur les points de rupture
+@each $breakpoint-name, $breakpoint-value in $breakpoints {
+  @media (min-width: #{$breakpoint-value}) {
+    @each $name, $size in $spacers {
+      .p-#{$breakpoint-name}-#{$name} { padding: $size; }
+      .pl-#{$breakpoint-name}-#{$name} { padding-left: $size; }
+      .pr-#{$breakpoint-name}-#{$name} { padding-right: $size; }
+      .pt-#{$breakpoint-name}-#{$name} { padding-top: $size; }
+      .pb-#{$breakpoint-name}-#{$name} { padding-bottom: $size; }
+      .m-#{$breakpoint-name}-#{$name} { margin: $size; }
+      .ml-#{$breakpoint-name}-#{$name} { margin-left: $size; }
+      .mr-#{$breakpoint-name}-#{$name} { margin-right: $size; }
+      .mt-#{$breakpoint-name}-#{$name} { margin-top: $size; }
+      .mb-#{$breakpoint-name}-#{$name} { margin-bottom: $size; }
+      .mx-#{$breakpoint-name}-#{$name} { margin-left: $size; margin-right: $size; }
+      .my-#{$breakpoint-name}-#{$name} { margin-top: $size; margin-bottom: $size; }
+      .px-#{$breakpoint-name}-#{$name} { padding-left: $size; padding-right: $size; }
+      .py-#{$breakpoint-name}-#{$name} { padding-top: $size; padding-bottom: $size; }
+    }
+  }
+}
+
 
 // Tailles d'icônes (exemple)
 $icon-sizes: (

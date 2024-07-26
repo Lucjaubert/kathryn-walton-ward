@@ -133,20 +133,25 @@
         background-color: transparent;
         color: map-get($theme-colors, "purple-dark");
         font-family: 'Atkinson Hyperlegible', sans-serif;
-        border: 2px solid map-get($theme-colors, "purple-dark");
+        border: 1px solid map-get($theme-colors, "purple-dark");
         border-radius: 20px;
-        width: 6vw;
+        padding: 10px 20px; 
+        width: auto;
+        display: inline-flex; 
+        align-items: center; 
+        justify-content: center; 
         background-size: 200% 100%;
         background-position: left;
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-        transition: color 0.3s ease, box-shadow 0.3s ease;
-      
+        transition: color 0.3s ease, box-shadow 0.3s ease, background-position 0.3s ease;
+        text-align: center;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    
         &:hover {
-          background-color: map-get($theme-colors, "green");
-          color: map-get($theme-colors, "white");
-          border: 2px solid map-get($theme-colors, "green");
-          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-          background-image: linear-gradient(to right, rgba(255,255,255,0.1) 50%, map-get($theme-colors, "green") 50%);
+            background-color: map-get($theme-colors, "green");
+            color: map-get($theme-colors, "white");
+            border: 1px solid map-get($theme-colors, "green");
+            box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3);
+            background-image: linear-gradient(to right, rgba(255,255,255,0.1) 50%, map-get($theme-colors, "green") 50%);
         }
       }
     }
@@ -169,7 +174,7 @@
     font-size: 24px; 
     color: map-get($theme-colors, "red");
     animation: bounce 2s infinite; 
-}
+  }
 
 }
 
@@ -182,11 +187,36 @@
   }
 
   .note {
-    background-color: map-get($theme-colors, "green");
+    position: relative;
+    max-width: 350px; 
+    min-width: 350px;
+    margin: 20px auto;
     padding: 20px;
-    border-radius: 10px;
-    color: map-get($theme-colors, "white");
+
+  
+    .note-content {
+      position: relative;
+      z-index: 2; 
+      transform: rotate(6deg);
+      color: map-get($theme-colors, "purple-dark");
+      border-radius: 10px;
+      padding: 60px;
+      top: 50px;
+      left: 20px;
+    }
+  
+    img.img-fluid-note {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 130%;
+      height: 130%;
+      object-fit: cover;
+      border-radius: 10px;
+      z-index: 1;
+    }
   }
+  
 
   img {
     max-width: 100%;
