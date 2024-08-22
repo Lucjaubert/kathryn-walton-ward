@@ -16,6 +16,17 @@
         padding: 3rem 4rem; 
     }
   }
+
+  .logo-ozco {
+    width: 180px;
+    height: auto;
+    margin-right: 10px;
+
+    @media (max-width: $breakpoint-md) {
+      width: 150px;
+      height: auto;
+    }
+  }
   
   .footer-section {
     display: flex;
@@ -46,11 +57,13 @@
     height: 100px;
     width: 2px;
     background-color: map-get($theme-colors, "white");
-    margin: 0 20px; 
+    margin: 0 20px 0 5px;
 
     @media (max-width: $breakpoint-md) {
-        display: none; 
+        height: 1px; 
+        margin: 5px 0 20px 0;
+        width: 100%; 
     }
-}
+  }
   
   

@@ -1,9 +1,9 @@
 import { Routes } from '@angular/router';
-import { HomepageComponent } from './pages/homepage/homepage.component';
-import { LegalNoticesComponent } from './pages/legal-documents/LegalNotices/legal-notices.component';
 
 export const routes: Routes = [
-    { path: '', component: HomepageComponent, title: 'Accueil' },
-    { path: 'mentions-legales', component: LegalNoticesComponent, title: 'Mentions Légales' },
+    {path: "", loadComponent: () => import("./pages/homepage/homepage.component").then(m => m.HomepageComponent), title: 'Accueil' },
+    {path: "mentions-legales", loadComponent: () => import("./pages/legal-documents/LegalNotices/legal-notices.component").then(m => m.LegalNoticesComponent), title: 'Mentions Légales' },
+    {path: "404", loadComponent: () => import("./pages/not-found/not-found.component").then(m => m.NotFoundComponent), title: 'Page non trouvée' },
+    {path: "**", redirectTo: "404" },
 ];
 
