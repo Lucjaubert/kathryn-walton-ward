@@ -1,0 +1,106 @@
+@import 'src/styles/styles.scss';
+@import 'src/styles/_variables.scss';
+
+.press-content {
+  .background-image {
+    position: absolute;
+    top: 55px;
+    left: 0;
+    width: 70%;
+    height: 70%;
+    background: url('/assets/img/raisin-fond.png') no-repeat left top;
+    background-size: contain;
+    background-position: left;
+    z-index: 0;
+    opacity: 0.5;
+
+    @media (max-width: $breakpoint-md) {
+      display: none;
+    }
+  }
+
+  .press-promotion {
+    position: relative;
+    z-index: 2;
+  }
+
+  .title-content {
+    h2 {
+      color: map-get($theme-colors, "red");
+    }
+  }
+
+  .press-box {
+    padding: 20px;
+    border-radius: 10px;
+    transition: background-color 0.7s ease-in-out, transform 0.7s ease-in-out, filter 0.7s ease-in-out;
+    transform: scale(1);  
+    position: relative;
+
+    &:hover {
+      transform: scale(1.05);  
+      z-index: 10;
+
+      ~ .press-box {
+        filter: blur(2px);  
+      }
+      
+      .press-box {
+        filter: blur(2px);  
+      }
+    }
+
+    &:not(:hover) {
+      filter: none; 
+    }
+
+    .press-image-container {
+      margin-top: 15px;
+      max-width: 100%;  
+      height: auto;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      opacity: 1;
+      transition: opacity 0.5s ease-in-out;  
+
+      img {
+        width: 80%;  
+        height: auto;  
+      }
+    }
+
+    .press-text-container {
+      .article-title {
+        font-weight: map-get($font-weight, "bold");
+      }
+
+      .btn {
+        border: 1.5px solid map-get($theme-colors, "purple-dark");
+        padding: 5px 12px;
+        border-radius: 20px;
+        color: map-get($theme-colors, "purple-dark");
+        transition: background-color 0.3s ease;
+
+        &:hover {
+          color: map-get($theme-colors, "white");
+          background-color: map-get($theme-colors, "purple-dark");
+        }
+      }
+    }
+  }
+
+  .homepage-link {
+    font-size: 14px;
+    text-decoration: none;
+    display: inline-block;
+    margin-bottom: 15px;
+    transform: scale(1);
+
+    &:hover {
+      text-decoration: none;
+      transform: scale(1.1);
+      transition: transform 0.7s ease-in-out;
+    }
+  }
+}
