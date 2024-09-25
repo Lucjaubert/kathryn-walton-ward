@@ -12,15 +12,16 @@
 
     <div class="row mt-12">
       <!-- Le Figaro Press Section -->
-      <div class="press-box d-flex text-start mb-6 py-7">
-        <div class="col-md-6">
+      <div class="press-box d-flex mb-6 py-7">
+        <div class="col-md-6 d-flex">
           <div class="press-text-container"> 
             <div class="d-flex">
-              <h3 class="article-title pr-2">Le Figaro</h3>
+              <h3 class="article-title pr-2">Le Figaro Magazine</h3>
               <h3> - Presse papier</h3>
             </div>
-            <p>Vendredi 30 et samedi 31 août 2024 N°24884 et N°24889</p>
-            <button class="btn mt-3 text-fs-10">Voir la page</button>
+            <p>Vendredi 30 et samedi 31 août 2024</p>
+            <p>N°24884 et N°24889</p>
+            <button class="btn mt-3 text-fs-10" id="showModalFigaro">Voir la page</button>
           </div>
         </div>
         <div class="col-md-6 text-end">
@@ -30,40 +31,42 @@
         </div>
       </div>
 
-      <!-- Les Echos Judiciaires Section -->
+      <!-- Cuisine et Vins de France Section -->
       <div class="press-box d-flex text-start mb-6 py-7">
         <div class="col-md-6 text-start">
           <div class="press-image-container"> 
-            <img src="/assets/img/les-echos-judiciaires.png" alt="Les Echos Judiciaires" loading="lazy" class="press-image">
+            <img src="/assets/img/cuisine-et-vins-de-france.jpg" alt="Cuisine et Vins de France" loading="lazy" class="press-image">
           </div>
         </div>
+        <div class="col-md-6 d-flex justify-content-end">
+          <div class="press-text-container text-start">
+            <div class="d-flex">
+              <h3 class="article-title pr-2">Cuisine et Vins de France</h3>
+              <h3> - Presse papier</h3>
+            </div>
+            <p>Vendredi 30 et samedi 31 août 2024</p>
+            <p>N°24884 et N°24889</p>
+            <button class="btn mt-3 text-fs-10" id="showModalCuisine">Voir la page</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Les Echos Judiciaires Section -->
+      <div class="press-box d-flex text-start mb-6 py-7">
         <div class="col-md-6">
           <div class="press-text-container">
             <div class="d-flex">
               <h3 class="article-title pr-2">Les Echos Judiciaires</h3>
               <h3> - Presse papier et presse web</h3>
             </div>
-            <p>Quinzaine du 16 au 31 juillet 2024 N°7131</p>
+            <p>Quinzaine du 16 au 31 juillet 2024</p>
+            <p>N°7131</p>
             <a href="https://www.echos-judiciaires.com/actualites/bordeaux-un-livre-pour-apprendre-langlais-du-vin/" target="_blank" class="btn mt-3 text-fs-10">Voir le site</a>
-          </div>
-        </div>
-      </div>
-
-      <!-- Cuisine et Vins de France Section -->
-      <div class="press-box d-flex text-start mb-6 py-7">
-        <div class="col-md-6">
-          <div class="press-text-container"> 
-            <div class="d-flex">
-              <h3 class="article-title pr-2">Cuisine et Vins de France</h3>
-              <h3> - Presse papier</h3>
-            </div>
-            <p>Vendredi 30 et samedi 31 août 2024 N°24884 et N°24889</p>
-            <button class="btn mt-3 text-fs-10">Voir la page</button>
           </div>
         </div>
         <div class="col-md-6 text-end">
           <div class="press-image-container"> 
-            <img src="/assets/img/cuisine-et-vins-de-france.jpg" alt="Cuisine et Vins de France" loading="lazy" class="press-image">
+            <img src="/assets/img/les-echos-judiciaires.png" alt="Les Echos Judiciaires" loading="lazy" class="press-image">
           </div>
         </div>
       </div>
@@ -71,21 +74,35 @@
       <!-- Tellement Soif TV Section -->
       <div class="press-box d-flex mb-6 py-7">
         <div class="col-md-6 text-start">
-          <div class="press-image-container"> 
-            <img src="/assets/img/tellement-soif.jpg" alt="Tellement Soif" loading="lazy" class="press-image">
+          <div class="press-video-container">
+            <iframe 
+            src="https://tellementsoif.tv/o/VideoContent/cahier-de-vacances-ameliorez-votre-anglais-du-vin_vco_29646211" 
+            width="560" 
+            height="360" 
+            frameborder="0" 
+            allow="encrypted-media" 
+            allowfullscreen>
+          </iframe>
           </div>
         </div>
-        <div class="col-md-6">
-          <div class="press-text-container"> 
+        <div class="col-md-6 d-flex justify-content-end">
+          <div class="press-text-container text-start">
             <div class="d-flex">
               <h3 class="article-title pr-2">Tellement Soif</h3>
               <h3> - TV</h3>
             </div>
-            <p>Le mercredi 24 juillet 2024 - Réservé aux abonnés</p>
-            <button class="btn mt-3 text-fs-10">Voir la vidéo</button>
+            <p>Mercredi 24 juillet 2024</p>
+            <p>Teaser, vidéo intégrale réservée aux abonnés</p>
+            <a href="https://tellementsoif.tv/o/VideoContent/cahier-de-vacances-ameliorez-votre-anglais-du-vin_vco_29646211" 
+              target="_blank" class="btn mt-3 text-fs-10">Vidéo intégrale</a>
           </div>
         </div>
       </div>
     </div>
   </div>
+</div>
+
+<div id="imageModal" class="modal">
+  <span class="close">&times;</span>
+  <img class="modal-content" id="modalImage">
 </div>
