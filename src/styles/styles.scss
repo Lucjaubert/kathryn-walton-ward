@@ -3,24 +3,35 @@
 
 @font-face {
     font-family: 'Atkinson Hyperlegible Reg';
-    src: url('/assets/fonts/AtkinsonHyperlegible-Regular.ttf') format('truetype');
+    src: url('/assets/fonts/AtkinsonHyperlegible-Regular.woff') format('truetype');
 }
 
 @font-face {
     font-family: 'Atkinson Hyperlegible Bd';
-    src: url('/assets/fonts/AtkinsonHyperlegible-Bold.ttf') format('truetype');
+    src: url('/assets/fonts/AtkinsonHyperlegible-Bold.woff') format('truetype');
 }
 
 @font-face {
     font-family: 'Garamond Premier Pro';
-    src: url('/assets/fonts/GaramondPremrPro.ttf') format('truetype');
+    src: url('/assets/fonts/GaramondPremrPro.woff') format('truetype');
 }
 
 @font-face {
     font-family: 'Garamond Premier Pro Bd';
-    src: url('/assets/fonts/GaramondPremrPro-Bd.ttf') format('truetype');
+    src: url('/assets/fonts/GaramondPremrPro-Bd.woff') format('truetype');
 }
 
+@font-face {
+    font-family: 'American Typewriter';
+    src: url('/assets/fonts/Times-Roman.woff') format('truetype');
+}
+
+.container {
+    width: 100% !important;
+    max-width: 100% !important;
+    display: flex;
+    flex-direction: column;
+}
 
 #app-container {
     position: relative;
@@ -55,6 +66,16 @@
 
 #page {
     flex: 1;
+}
+
+app-footer {
+    bottom: 0;
+    width: 100%;
+    margin-top: auto; 
+}
+
+html {
+    height: 100%;
 }
 
 html, body {

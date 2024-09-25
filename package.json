@@ -28,8 +28,12 @@
     "@nguniversal/express-engine": "^7.0.1",
     "bootstrap": "^5.3.3",
     "express": "^4.18.2",
+    "gsap": "^3.12.5",
+    "rollup": "^4.22.4",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
+    "vite": "^5.4.8",
+    "webpack": "^5.94.0",
     "zone.js": "~0.14.3"
   },
   "devDependencies": {
