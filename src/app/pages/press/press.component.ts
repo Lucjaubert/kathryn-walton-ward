@@ -24,45 +24,89 @@ export class PressComponent implements OnInit, AfterViewInit {
     pressBoxes.forEach((box, index) => {
       const isLeft = index % 2 === 0;
 
-      gsap.fromTo(
-        box.querySelector('.press-image-container'),
-        {
+      const imageContainer = box.querySelector('.press-image-container');
+      const videoContainer = box.querySelector('.press-video-container');
+      const quoteContainer = box.querySelector('.press-quote');
+      const textContainer = box.querySelector('.press-text-container');
+
+      const mediaElement = imageContainer || videoContainer || quoteContainer;
+
+      if (mediaElement) {
+        gsap.from(mediaElement, {
           x: isLeft ? -200 : 200,
           opacity: 0,
-        },
-        {
-          x: 0,
-          opacity: 1,
           duration: 1,
           scrollTrigger: {
             trigger: box,
             start: 'top 80%',
             toggleActions: 'play none none none',
           },
-        }
-      );
+        });
+      }
 
-      gsap.fromTo(
-        box.querySelector('.press-text-container'),
-        {
-          y: 100,
+      if (textContainer) {
+        gsap.from(textContainer, {
+          y: 110,
           opacity: 0,
-        },
-        {
-          y: 0,
-          opacity: 1,
           duration: 1,
           scrollTrigger: {
             trigger: box,
             start: 'top 80%',
             toggleActions: 'play none none none',
           },
-        }
-      );
+        });
+      }
     });
+
+    const homepageLink = document.querySelector('.homepage-link');
+
+    homepageLink?.addEventListener('mouseenter', () => {
+      gsap.to(homepageLink, { scale: 1.1, duration: 0.7, ease: 'ease-in-out' });
+    });
+
+    homepageLink?.addEventListener('mouseleave', () => {
+      gsap.to(homepageLink, { scale: 1, duration: 0.7, ease: 'ease-in-out' });
+    });
+
+    gsap.fromTo(
+      '.title-content h2',
+      {
+        y: 50,
+        opacity: 0,
+      },
+      {
+        y: 0,
+        opacity: 1,
+        duration: 1,
+        scrollTrigger: {
+          trigger: '.title-content',
+          start: 'top 80%',
+          toggleActions: 'play none none none',
+        },
+      }
+    );
+
+    gsap.fromTo(
+      '.title-content .homepage-link',
+      {
+        y: 50,
+        opacity: 0,
+      },
+      {
+        y: 0,
+        opacity: 1,
+        duration: 1,
+        scrollTrigger: {
+          trigger: '.title-content',
+          start: 'top 80%',
+          toggleActions: 'play none none none',
+        },
+      }
+    );
 
     this.setupModal('#showModalFigaro', '/assets/img/le-figaro-gd-format.jpg');
     this.setupModal('#showModalCuisine', '/assets/img/cuisine-et-vin-de-france-gd-format.jpg');
+    this.setupModal('#showModalRVDF', '/assets/img/la-revue-du-vin-de-france-gd-format.jpg');
   }
 
   setupModal(buttonId: string, imagePath: string): void {

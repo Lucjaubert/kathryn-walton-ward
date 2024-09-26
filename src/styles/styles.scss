@@ -84,7 +84,6 @@ html, body {
 
 h1, h2, h3, p, ul, li, a {
     font-weight: map-get($font-weight, "regular");
-    font-size: map-get($font-size, "30");
 }
 
 h1 {
@@ -105,8 +104,21 @@ h3 {
     font-size: map-get($font-size, "50");
 }
 
+h4 {
+    font-family: 'Garamond Premier Pro';
+    color: map-get($theme-colors, "purple-dark");
+    font-size: map-get($font-size, "40");
+}
+
 a {
     color: map-get($theme-colors, "purple-dark");
+    font-size: map-get($font-size, "30");
+}
+
+p {
+    font-family: 'Atkinson Hyperlegible', sans-serif;
+    color: map-get($theme-colors, "purple-dark");
+    font-size: map-get($font-size, "30");
 }
 
 @media (max-width: 1024px) {
