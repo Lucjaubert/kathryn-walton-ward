@@ -2,6 +2,7 @@
 @import 'src/styles/_variables.scss';
 
 .promotion-content {
+  
   .background-image {
     position: absolute;
     top: 0;
@@ -56,8 +57,39 @@
       span:nth-child(14) { animation-delay: 0.65s; }
       span:nth-child(15) { animation-delay: 0.7s; }
 
-      @media (min-width: $breakpoint-md) { 
+      @media (min-width: $breakpoint-lg) { 
         display: flex;
+      }
+    }
+
+    .btn-press {
+      background-color: transparent;
+      color: map-get($theme-colors, "purple-dark");
+      font-family: 'Atkinson Hyperlegible', sans-serif;
+      font-size: map-get($font-size, "10");
+      border: 1px solid map-get($theme-colors, "purple-dark");
+      border-radius: 20px;
+      padding: 5px 10px;
+      width: auto;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background-size: 200% 100%;
+      background-position: left;
+      transition: color 0.3s ease, box-shadow 0.3s ease, background-position 0.3s ease;
+      text-align: center;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+
+      &:hover {
+        background-color: map-get($theme-colors, "purple-dark");
+        color: map-get($theme-colors, "white");
+        border: 1px solid map-get($theme-colors, "purple-dark");
+        box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3);
+        background-image: linear-gradient(to right, rgba(255,255,255,0.1) 50%, map-get($theme-colors, "purple-dark") 50%);
+      }
+
+      @media (max-width: $breakpoint-md) { 
+        display: none;
       }
     }
   }
@@ -98,6 +130,37 @@
       span:nth-child(13) { animation-delay: 0.6s; }
       span:nth-child(14) { animation-delay: 0.65s; }
       span:nth-child(15) { animation-delay: 0.7s; }
+
+      @media (min-width: $breakpoint-md) { 
+        display: none;
+      }
+    }
+
+    .btn-press {
+      background-color: transparent;
+      color: map-get($theme-colors, "purple-dark");
+      font-family: 'Atkinson Hyperlegible', sans-serif;
+      font-size: map-get($font-size, "10");
+      border: 1px solid map-get($theme-colors, "purple-dark");
+      border-radius: 20px;
+      padding: 5px 10px;
+      width: auto;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background-size: 200% 100%;
+      background-position: left;
+      transition: color 0.3s ease, box-shadow 0.3s ease, background-position 0.3s ease;
+      text-align: center;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+
+      &:hover {
+        background-color: map-get($theme-colors, "purple-dark");
+        color: map-get($theme-colors, "white");
+        border: 1px solid map-get($theme-colors, "purple-dark");
+        box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3);
+        background-image: linear-gradient(to right, rgba(255,255,255,0.1) 50%, map-get($theme-colors, "purple-dark") 50%);
+      }
 
       @media (min-width: $breakpoint-md) { 
         display: none;
