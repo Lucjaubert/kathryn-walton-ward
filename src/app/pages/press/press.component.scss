@@ -77,6 +77,19 @@
       }
     }
 
+    .press-image-container-RDVF {
+      position: relative;
+      padding-bottom: 73.25%;
+      height: 0;
+      overflow: hidden;
+      max-width: 100%;
+
+      img {
+        width: 80%;
+        height: auto;
+      }
+    }
+
     .press-video-container {
       position: relative;
       height: 0;
@@ -126,10 +139,11 @@
     }
 
     .press-quote {
+      font-family: 'Garamond Premier Pro';
       position: relative;
-      font-size: 0.9em;
+      font-size: 1.1em;
       font-style: italic;
-      padding: 20px 40px;
+      padding: 30px 40px;
       line-height: 1.6;
       color: map-get($theme-colors, 'purple-dark');
 
@@ -137,7 +151,7 @@
       &::after {
         content: '«';
         position: absolute;
-        font-size: 4em;
+        font-size: 3em;
         color: rgba(0, 0, 0, 0.1);
         font-family: Georgia, serif;
       }

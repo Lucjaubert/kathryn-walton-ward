@@ -59,7 +59,7 @@
             },
             "development": {
               "optimization": false,
-              "sourceMap": true,
+              "sourceMap": false,
               "namedChunks": true,
               "aot": false,
               "extractLicenses": false,
