@@ -72,7 +72,23 @@
       max-width: 100%;
 
       img {
-        width: 80%;
+        width: 100%;
+        height: auto;
+      }
+    }
+
+    .press-image-container-les-echos {
+
+      img {
+        width: 35%;
+        height: auto;
+      }
+    }
+
+    .press-image-container-reussir {
+
+      img {
+        width: 60%;
         height: auto;
       }
     }

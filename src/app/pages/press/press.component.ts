@@ -28,8 +28,22 @@ export class PressComponent implements OnInit, AfterViewInit {
       const videoContainer = box.querySelector('.press-video-container');
       const quoteContainer = box.querySelector('.press-quote');
       const textContainer = box.querySelector('.press-text-container');
+      const imageElement = box.querySelector('img');
 
       const mediaElement = imageContainer || videoContainer || quoteContainer;
+
+      if (imageElement) {
+        gsap.from(imageElement, {
+          x: isLeft ? 200 : -200,
+          opacity: 0,
+          duration: 1,
+          scrollTrigger: {
+            trigger: box,
+            start: 'top 80%',
+            toggleActions: 'play none none none',
+          },
+        });
+      }
 
       if (mediaElement) {
         gsap.from(mediaElement, {
@@ -104,9 +118,10 @@ export class PressComponent implements OnInit, AfterViewInit {
       }
     );
 
-    this.setupModal('#showModalFigaro', '/assets/img/le-figaro-gd-format.jpg');
-    this.setupModal('#showModalCuisine', '/assets/img/cuisine-et-vin-de-france-gd-format.jpg');
-    this.setupModal('#showModalRVDF', '/assets/img/la-revue-du-vin-de-france-gd-format.jpg');
+    this.setupModal('#showModalFigaro', '/assets/img/le-figaro-gd-format.webp');
+    this.setupModal('#showModalCuisine', '/assets/img/cuisine-et-vin-de-france-gd-format.webp');
+    this.setupModal('#showModalRVDF', '/assets/img/la-revue-du-vin-de-france-gd-format.webp');
+    this.setupModal('#showModalLesEchosWe', '/assets/img/ECWE-gd-format.webp');
   }
 
   setupModal(buttonId: string, imagePath: string): void {
