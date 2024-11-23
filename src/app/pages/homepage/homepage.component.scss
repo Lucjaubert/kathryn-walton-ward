@@ -2,7 +2,7 @@
 @import 'src/styles/_variables.scss';
 
 .promotion-content {
-  
+
   .background-image {
     position: absolute;
     top: 0;
@@ -57,7 +57,7 @@
       span:nth-child(14) { animation-delay: 0.65s; }
       span:nth-child(15) { animation-delay: 0.7s; }
 
-      @media (min-width: $breakpoint-lg) { 
+      @media (min-width: $breakpoint-lg) {
         display: flex;
       }
     }
@@ -88,7 +88,7 @@
         background-image: linear-gradient(to right, rgba(255,255,255,0.1) 50%, map-get($theme-colors, "purple-dark") 50%);
       }
 
-      @media (max-width: $breakpoint-md) { 
+      @media (max-width: $breakpoint-md) {
         display: none;
       }
     }
@@ -131,7 +131,7 @@
       span:nth-child(14) { animation-delay: 0.65s; }
       span:nth-child(15) { animation-delay: 0.7s; }
 
-      @media (min-width: $breakpoint-md) { 
+      @media (min-width: $breakpoint-md) {
         display: none;
       }
     }
@@ -162,7 +162,7 @@
         background-image: linear-gradient(to right, rgba(255,255,255,0.1) 50%, map-get($theme-colors, "purple-dark") 50%);
       }
 
-      @media (min-width: $breakpoint-md) { 
+      @media (min-width: $breakpoint-md) {
         display: none;
       }
     }
@@ -397,12 +397,12 @@
 
     .author {
       .img-fluid-author {
-        width: 100%; 
-        border-radius: 50%; 
-        object-fit: cover; 
-        object-position: center; 
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 
-                    0 6px 30px rgba(0, 0, 0, 0.1); 
+        width: 100%;
+        border-radius: 50%;
+        object-fit: cover;
+        object-position: center;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1),
+                    0 6px 30px rgba(0, 0, 0, 0.1);
 
           @media (max-width: $breakpoint-xxl) {
             width: 80% !important;
@@ -420,12 +420,12 @@
       .col-lg-3 {
           display: flex;
           justify-content: center;
-          align-items: center; 
-          margin-top: 10px; 
-          padding-left: 0; 
+          align-items: center;
+          margin-top: 10px;
+          padding-left: 0;
 
           @media (max-width: 768px) {
-              width: 100%; 
+              width: 100%;
           }
       }
     }
@@ -437,5 +437,25 @@
     }
   }
 
+  .img-fluid-author {
+    width: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1),
+                0 6px 30px rgba(0, 0, 0, 0.1);
+
+      @media (max-width: $breakpoint-xxl) {
+        width: 80% !important;
+      }
+
+      @media (max-width: $breakpoint-md) {
+        width: 40% !important;
+      }
+
+      @media (max-width: $breakpoint-sm) {
+        width: 30% !important;
+      }
+    }
+
 }
-  
