@@ -1,69 +1,89 @@
 @import "../../../styles/variables.scss";
 
 .footer-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #7860A4; 
-    color: #ffffff;
-    padding: 3rem 14rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #7860A4;
+  color: #ffffff;
+  padding: 3rem 14rem;
 
-    @media (max-width: $breakpoint-lg) {
-        padding: 3rem 6rem;
-    }
-
-    @media (max-width: $breakpoint-sm) {
-        padding: 3rem 4rem; 
-    }
+  @media (max-width: $breakpoint-lg) {
+    padding: 3rem 6rem;
   }
 
-  .logo-ozco {
-    width: 180px;
-    height: auto;
-    margin-right: 10px;
-
-    @media (max-width: $breakpoint-md) {
-      width: 150px;
-      height: auto;
-    }
-  }
-  
-  .footer-section {
-    display: flex;
-    width: 100%;
-    justify-content: space-between;
-  }
-  
-  .footer-contact, .footer-logo, .footer-contacts {
-    display: flex;
+  @media (max-width: $breakpoint-md) {
     flex-direction: column;
     align-items: center;
+    padding: 3rem 4rem;
   }
-  
-  .footer-logo img {
-    margin-bottom: 10px;
-  }
-  
-  footer a {
-    color: #ffffff;
-    text-decoration: none;
-  }
-  
-  footer p, footer a {
-    margin: 5px 0;
-  }
+}
 
-  .vertical-divider {
-    height: 100px;
-    width: 2px;
-    background-color: map-get($theme-colors, "white");
-    margin: 0 20px 0 5px;
+.logo-ozco,
+.logo-studioet {
+  width: 180px;
+  height: auto;
 
-    @media (max-width: $breakpoint-md) {
-        height: 1px; 
-        margin: 5px 0 20px 0;
-        width: 100%; 
-    }
+  @media (max-width: $breakpoint-md) {
+    width: 150px;
+    height: auto;
   }
-  
-  
+}
+
+.footer-section {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+
+  @media (max-width: $breakpoint-sm) {
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+  }
+}
+
+.footer-contact,
+.footer-logo,
+.footer-contacts {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+
+  @media (max-width: $breakpoint-sm) {
+    margin-bottom: 2rem;
+  }
+}
+
+.footer-logo img {
+  margin-bottom: 10px;
+}
+
+footer a {
+  color: #ffffff;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+footer p,
+footer a {
+  margin: 5px 0;
+  color: #ffffff;
+}
+
+.vertical-divider {
+  height: 100px;
+  width: 2px;
+  background-color: map-get($theme-colors, "white");
+  margin: 0 20px 0 5px;
+
+  @media (max-width: $breakpoint-md) {
+    height: 1px;
+    width: 100%;
+    margin: 10px 0;
+  }
+}
+

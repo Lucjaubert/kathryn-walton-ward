@@ -122,6 +122,7 @@ export class PressComponent implements OnInit, AfterViewInit {
     this.setupModal('#showModalCuisine', '/assets/img/cuisine-et-vin-de-france-gd-format.webp');
     this.setupModal('#showModalRVDF', '/assets/img/la-revue-du-vin-de-france-gd-format.webp');
     this.setupModal('#showModalLesEchosWe', '/assets/img/ECWE-gd-format.webp');
+    this.setupModal('#showModalTerresDeVins', '/assets/img/TerredeVins_1124.webp');
   }
 
   setupModal(buttonId: string, imagePath: string): void {
