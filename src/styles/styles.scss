@@ -38,26 +38,7 @@
     display: flex;
     flex-direction: column;
     min-height: 110vh;
-
-    @media (max-width: $breakpoint-3xl) {
-        padding: 0 20rem;
-    }
-
-    @media (max-width: $breakpoint-xxl) {
-        padding: 0 14rem;
-    }
-
-    @media (max-width: $breakpoint-xl) {
-        padding: 0 12rem;
-    }
-
-    @media (max-width: $breakpoint-lg) {
-        padding: 0 8rem;
-    }
-
-    @media (max-width: $breakpoint-md) {
-        padding: 0 1rem;
-    }
+    padding: 0 clamp(1rem, 5%, 20rem);
 }
 
 #page {
@@ -89,59 +70,37 @@ h1, h2, h3, p, ul, li, a {
 h1 {
     font-family: 'Garamond Premier Pro';
     color: map-get($theme-colors, "red");
-    font-size: map-get($font-size, "150");
+    font-size: clamp(2rem, 5vw, map-get($font-size, "150"));
 }
 
 h2 {
     font-family: 'Garamond Premier Pro';
     color: map-get($theme-colors, "purple-dark");
-    font-size: map-get($font-size, "90");
+    font-size: clamp(1.5rem, 4vw, map-get($font-size, "90"));
 }
 
 h3 {
     font-family: 'Garamond Premier Pro';
     color: map-get($theme-colors, "purple-dark");
-    font-size: map-get($font-size, "50");
+    font-size: clamp(1.25rem, 3vw, map-get($font-size, "50"));
 }
 
 h4 {
     font-family: 'Garamond Premier Pro';
     color: map-get($theme-colors, "purple-dark");
-    font-size: map-get($font-size, "40");
+    font-size: clamp(1.125rem, 2.5vw, map-get($font-size, "40"));
 }
 
 a {
     color: map-get($theme-colors, "purple-dark");
-    font-size: map-get($font-size, "30");
+    font-size: clamp(0.875rem, 2vw, map-get($font-size, "30"));
 }
 
-p {
+p, ul, li {
     font-family: 'Atkinson Hyperlegible', sans-serif;
     color: map-get($theme-colors, "purple-dark");
-    font-size: map-get($font-size, "30");
+    font-size: clamp(0.9rem, 1.5vw, map-get($font-size, "20"));
 }
-
-@media (max-width: 1024px) {
-    h1 { font-size: calc(map-get($font-size, "150") * 0.9); }
-    h2 { font-size: calc(map-get($font-size, "90") * 0.9); }
-    h3 { font-size: calc(map-get($font-size, "50") * 0.9); }
-    p, ul, li, a { font-size: calc(map-get($font-size, "30") * 0.9); }
-}
-
-@media (max-width: 768px) {
-    h1 { font-size: calc(map-get($font-size, "130") * 0.8); }
-    h2 { font-size: calc(map-get($font-size, "80") * 0.8); }
-    h3 { font-size: calc(map-get($font-size, "40") * 0.8); }
-    p, ul, li, a  { font-size: calc(map-get($font-size, "30") * 0.8); }
-}
-
-@media (max-width: 425px) {
-    h1 { font-size: calc(map-get($font-size, "120") * 0.7); }
-    h2 { font-size: calc(map-get($font-size, "70") * 0.7); }
-    h3 { font-size: calc(map-get($font-size, "30") * 0.7); }
-    p, ul, li, a  { font-size: calc(map-get($font-size, "20") * 0.7); }
-}
-
 
 @each $breakpoint, $breakpoint-value in $breakpoints {
   @each $name, $size in $spacers {
