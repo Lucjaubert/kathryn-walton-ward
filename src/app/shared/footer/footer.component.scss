@@ -74,16 +74,9 @@ footer a {
   color: #ffffff;
 }
 
-.vertical-divider {
-  height: 100px;
-  width: 2px;
-  background-color: map-get($theme-colors, "white");
-  margin: 0 20px 0 5px;
+.logo-ozco {
 
-  @media (max-width: $breakpoint-md) {
-    height: 1px;
-    width: 100%;
-    margin: 10px 0;
+  @media (min-width: 768px) {
+    margin-top: 0;
   }
 }
-
