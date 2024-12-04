@@ -93,7 +93,7 @@ h4 {
 
 a {
     color: map-get($theme-colors, "purple-dark");
-    font-size: clamp(0.875rem, 2vw, map-get($font-size, "30"));
+    font-size: clamp(0.7rem, 2vw, map-get($font-size, "20"));
 }
 
 p, ul, li {
